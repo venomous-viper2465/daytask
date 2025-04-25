@@ -1,8 +1,16 @@
 import 'package:daytask/auth.dart';
+import 'package:daytask/firebase_options.dart';
+import 'package:daytask/home.dart';
 import 'package:daytask/splash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -18,7 +26,14 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           scaffoldBackgroundColor: Color.fromARGB(255, 33, 40, 50)),
-      home: SplashScreen(),
+      home: StreamBuilder(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (ctx, snapshot) {
+            if (snapshot.hasData) {
+              return Home();
+            }
+            return Authentication();
+          }),
     );
   }
 }

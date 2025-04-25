@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863314317287",
+    "project_id": "daytask-12746",
+    "storage_bucket": "daytask-12746.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863314317287:android:e06e4d45cbad3dfb31b742",
+        "android_client_info": {
+          "package_name": "com.example.daytask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABw4aXjlGZKOVIFPRaPej3pgg2MHLHcOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
