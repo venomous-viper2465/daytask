@@ -1,3 +1,5 @@
+import 'package:daytask/mainscreen.dart';
+import 'package:daytask/widgets/bottomnavigation.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -10,8 +12,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: [
+        MainScreen(),
+        MainScreen(),
+      ][currentPageIndex],
+      bottomNavigationBar: BottomNavigation(
+        selectedPageIndex: currentPageIndex,
+        onPress: (value) {
+          setState(() {
+            currentPageIndex = value;
+          });
+        },
+      ),
+    );
   }
 }

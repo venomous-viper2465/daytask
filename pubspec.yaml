@@ -65,6 +65,15 @@ flutter:
   assets:
     - lib/assets/images/splashimage.jpg
     - lib/assets/images/logo.png
+    - lib/assets/icons/addTask.png
+    - lib/assets/icons/calendar.png
+    - lib/assets/icons/calendarSelect.png
+    - lib/assets/icons/history.png
+    - lib/assets/icons/historySelect.png
+    - lib/assets/icons/home.png
+    - lib/assets/icons/homeSelect.png
+    - lib/assets/icons/profile.png
+    - lib/assets/icons/profileSelect.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

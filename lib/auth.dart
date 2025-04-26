@@ -1,4 +1,3 @@
-import 'package:daytask/home.dart';
 import 'package:daytask/widgets/cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
