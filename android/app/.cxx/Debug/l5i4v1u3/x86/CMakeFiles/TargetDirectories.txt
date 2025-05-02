@@ -1,0 +1,2 @@
+B:/repo/daytask/android/app/.cxx/Debug/l5i4v1u3/x86/CMakeFiles/edit_cache.dir
+B:/repo/daytask/android/app/.cxx/Debug/l5i4v1u3/x86/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:daytask/auth.dart';
 import 'package:daytask/firebase_options.dart';
 import 'package:daytask/home.dart';
@@ -12,12 +13,12 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  final db = FirebaseFirestore.instance;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (ctx, snapshot) {
             if (snapshot.hasData) {
-              return Home();
+              return SafeArea(child: Home());
             }
             return Authentication();
           }),
